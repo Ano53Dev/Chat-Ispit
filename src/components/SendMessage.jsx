@@ -3,9 +3,9 @@ import {auth, db} from '../firebase'
 import {addDoc, collection, serverTimestamp} from 'firebase/firestore'
 
 const style = {
-  form: `h-14 w-full max-w-[728px] mb-10 rounded-lg flex text-xl absolute bottom-0`,
-  input: `w-full text-xl p-3 bg-gray-900 text-white rounded-lg outline-none border-none`,
-  button: `w-[20%] rounded-lg bg-red-600 mx-2 hover:bg-sky-700`,
+  form: `h-14 w-full max-w-[728px] rounded-lg flex text-xl bottom-0`,
+  input: `w-full text-xl p-3 bg-blue-700 text-white rounded-lg outline-none border-none`,
+  button: `w-[20%] rounded-lg bg-red-600 mx-2 hover:bg-sky-700 `,
 };
 
 const SendMessage = ({scroll}) => {
@@ -27,6 +27,7 @@ const SendMessage = ({scroll}) => {
     setInput('')
     scroll.current.scrollIntoView({behavior: 'smooth'}) // izbriše polje send nakon slanja
   }
+  
 
   return (
     <form onSubmit={sendMessage} className={style.form}>
